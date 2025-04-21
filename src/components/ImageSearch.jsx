@@ -33,7 +33,8 @@ function ImageSearch() {
     setLoading(false);
   };
 
-  const handleLike = (image) => {
+  const handleLike = (image, e) => {
+    e.stopPropagation(); // Prevent image card click when liking
     const likedImages = JSON.parse(localStorage.getItem('likedImages')) || [];
     const isAlreadyLiked = likedImages.some(img => img.id === image.id);
     
@@ -47,6 +48,10 @@ function ImageSearch() {
       localStorage.setItem('likedImages', JSON.stringify(updatedLikes));
       alert('Image added to favorites!');
     }
+  };
+
+  const handleImageClick = (image) => {
+    window.open(image.pageURL, '_blank');
   };
 
   const handleSubmit = (e) => {
@@ -84,11 +89,15 @@ function ImageSearch() {
       
       <div className="image-grid">
         {images.map((image) => (
-          <div key={image.id} className="image-card">
+          <div 
+            key={image.id} 
+            className="image-card"
+            onClick={() => handleImageClick(image)}
+          >
             <img src={image.webformatURL} alt={image.tags} />
             <button
               className="like-button"
-              onClick={() => handleLike(image)}
+              onClick={(e) => handleLike(image, e)}
               title="Add to favorites"
             >
               ❤️
