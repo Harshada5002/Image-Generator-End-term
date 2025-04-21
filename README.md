@@ -1,12 +1,49 @@
-# React + Vite
+# 📸 ImageFinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Project Title
+**ImageFinder**
 
-Currently, two official plugins are available:
+## 📃 Description
+ImageFinder is a modern and responsive React-based image search application that uses the Pixabay API to fetch and display high-quality images. The app allows users to search for images using keywords, view their search history, and save favorite images. It utilizes React Hooks like `useState` and `useEffect` for state and lifecycle management, and features custom CSS for a clean, unique design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🔍 Real-time image search from the Pixabay API
+- 🕘 View recent search history
+- ❤️ Save your favorite images
+- 🎨 Custom CSS for modern design and styling
+- ⚡ Responsive and fast UI
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **Frontend**: React.js
+- **Styling**: Custom CSS (not Tailwind)
+- **State Management**: React Hooks (`useState`, `useEffect`)
+- **API**: [Pixabay API](https://pixabay.com/api/docs/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/imagefinder.git
+cd imagefinder
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Add your Pixabay API key
+Create a `.env` file in the root of the project and add:
+```
+REACT_APP_PIXABAY_API_KEY=your_api_key_here
+```
+
+### 4. Start the development server
+```bash
+npm start
+```
+
+### 5. Open in browser
+```
+http://localhost:3000
+```
